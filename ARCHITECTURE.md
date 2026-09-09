@@ -22,7 +22,7 @@ Each page exports its own metadata. Project routes are generated from `lib/conte
 
 Pages and static sections are Server Components. Only the mobile navigation, parallax wrapper, comparison slider, gallery, and form use client-side state. Internal navigation uses Next.js Link.
 
-Tailwind and shared visual styles live in `app/globals.css`. Image assets are in `public/image` and `public/before_after`.
+Components use Tailwind utilities for layout, responsive styles, typography, and interaction states. `lib/styles.ts` contains reusable Tailwind class groups for section spacing, eyebrows, buttons, and text links. `app/globals.css` only defines Tailwind's theme, base element defaults, smooth anchor scrolling, and the cursor keyframes. `FadeSection` fades entire sections at the viewport edges in both scroll directions. Headings remain plain text; reduced-motion users see every section without fading. CircularText and the hero typing effect remain independent. Image assets are in `public/image` and `public/before_after`.
 
 ## Development
 

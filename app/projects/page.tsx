@@ -1,3 +1,5 @@
+import FadeSection from "@/components/ui/fade-section";
+import { sectionSpacing } from "@/lib/styles";
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/ui/page-intro";
 import { ProjectGrid } from "@/components/projects/project-grid";
@@ -23,12 +25,12 @@ export default function ProjectsPage() {
         }
         description="Explore homes shaped by individuality, thoughtful materials and the art of everyday living."
       />
-      <section
+      <FadeSection
         aria-label="Selected projects"
-        className="section-shell projects-section"
+        className={`${sectionSpacing} projects-section bg-[#f4efdf]`}
       >
         <ProjectGrid />
-      </section>
+      </FadeSection>
       <BeforeAfter />
       <ContactCta />
     </>

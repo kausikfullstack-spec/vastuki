@@ -1,4 +1,5 @@
 "use client";
+import FadeSection from "@/components/ui/fade-section";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -16,8 +17,8 @@ export function ProjectGallery({
       (current) => (current + direction + images.length) % images.length,
     );
   return (
-    <section className="project-gallery" aria-label={`${title} gallery`}>
-      <div className="gallery-image">
+    <FadeSection className="project-gallery" aria-label={`${title} gallery`}>
+      <div className="gallery-image relative h-[min(68vw,_720px)] min-h-[280px]">
         <Image
           src={images[index]}
           alt={`${title}, view ${index + 1}`}
@@ -27,7 +28,7 @@ export function ProjectGallery({
           className="object-cover"
         />
       </div>
-      <div className="gallery-controls">
+      <div className="gallery-controls flex items-center justify-between py-6 px-0 text-[14px] font-medium [&_button]:min-h-[44px] [&_button]:p-2">
         <button
           type="button"
           onClick={() => change(-1)}
@@ -54,7 +55,7 @@ export function ProjectGallery({
             onClick={() => setIndex(photoIndex)}
             aria-label={`Show project photo ${photoIndex + 1}`}
             aria-pressed={index === photoIndex}
-            className="gallery-thumbnail"
+            className="gallery-thumbnail relative w-24 h-18 [border:3px_solid_transparent] [&[aria-pressed=true]]:border-green"
           >
             <Image
               src={src}
@@ -66,6 +67,6 @@ export function ProjectGallery({
           </button>
         ))}
       </div>
-    </section>
+    </FadeSection>
   );
 }

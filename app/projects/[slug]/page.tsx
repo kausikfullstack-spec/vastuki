@@ -1,3 +1,4 @@
+import { sectionSpacing, textLinkStyles } from "@/lib/styles";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -27,8 +28,8 @@ export default async function ProjectPage({ params }: Props) {
         title={project.title}
         description={project.detail}
       />
-      <div className="section-shell">
-        <Link href="/projects" className="text-link mb-8">
+      <div className={`${sectionSpacing}`}>
+        <Link href="/projects" className={`${textLinkStyles} mb-8`}>
           ← All projects
         </Link>
         <ProjectGallery images={project.images} title={project.title} />

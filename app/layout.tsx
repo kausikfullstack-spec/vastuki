@@ -3,6 +3,7 @@ import { Lora, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { ConsultationPopup } from "@/components/contact/consultation-popup";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <SiteFooter />
+        <ConsultationPopup />
       </body>
     </html>
   );

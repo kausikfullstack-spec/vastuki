@@ -1,9 +1,9 @@
+import { ButtonIcon } from "@/components/ui/button-icon";
 import FadeSection from "@/components/ui/fade-section";
 import { buttonStyles } from "@/lib/styles";
 import { ParallaxImage } from "@/components/ui/parallax-image";
 import Image from "next/image";
 import Link from "next/link";
-import { Arrow } from "@/components/ui/arrow";
 import TextType from "@/components/ui/text-type";
 import CircularText from "@/components/ui/circular-text";
 
@@ -15,7 +15,7 @@ export function Hero() {
     >
       <ParallaxImage className="hero-photo absolute -inset-y-10 inset-x-0 will-change-transform motion-reduce:will-change-auto">
         <Image
-          src="/image/RBM03176.JPG"
+          src="/image/_DSC9698-Edit.jpg"
           alt="Vastuki living room with terracotta sofa, sculptural coffee tables and warm lighting"
           fill
           sizes="100vw"
@@ -33,7 +33,7 @@ export function Hero() {
             pauseDuration={1500}
             deletingSpeed={50}
             showCursor
-            cursorCharacter="_"
+            cursorCharacter="|"
             cursorBlinkDuration={0.5}
           />
         </h1>
@@ -43,21 +43,27 @@ export function Hero() {
           unmistakably like home.
         </p>
         <Link
-          className={`${buttonStyles} button-cream bg-cream text-green mt-[33px]`}
+          className={`${buttonStyles} button-cream mt-[33px]`}
           href="/projects"
         >
-          Explore our work <Arrow diagonal />
+          <ButtonIcon /> Explore our work
         </Link>
       </div>
-      <div className="hero-circle absolute right-[8%] bottom-[105px] w-41 h-41 max-md:w-29 max-md:h-29 max-md:right-[7%] max-md:bottom-19.5">
+      <div className="hero-circle absolute right-[8%] bottom-[305px] w-41 h-41 max-md:w-29 max-md:h-29 max-md:right-[7%] max-md:bottom-19.5">
         <CircularText
           text="ARCHITECTURE · INTERIORS · EXPERIENCES · "
           spinDuration={20}
           onHover="speedUp"
         />
-        {/* <span className="hero-circle-center" aria-hidden="true">
-          <Arrow diagonal />
-        </span> */}
+        <div className="pointer-events-none absolute inset-[25%]">
+          <Image
+            src="/image/logo.png"
+            alt="Vastuki logo"
+            fill
+            sizes="(max-width: 767px) 58px, 82px"
+            className="object-contain"
+          />
+        </div>
       </div>
       <div className="hero-bottom absolute left-[7.5%] right-[5%] bottom-8 flex items-center justify-between text-[8px] tracking-[0.17em]">
         {/* <Link href="/about" className="scroll-link">
@@ -67,9 +73,9 @@ export function Hero() {
           THE ART OF EVERYDAY LIVING <span>VASTUKI DESIGNS</span>
         </span> */}
       </div>
-      <div className="hero-side absolute right-7 top-[40%] [writing-mode:vertical-rl] text-[8px] tracking-[0.2em] max-md:hidden">
+      {/* <div className="hero-side absolute right-7 top-[40%] [writing-mode:vertical-rl] text-[8px] tracking-[0.2em] max-md:hidden">
         THOUGHTFULLY DESIGNED. BEAUTIFULLY LIVED.
-      </div>
+      </div> */}
     </FadeSection>
   );
 }

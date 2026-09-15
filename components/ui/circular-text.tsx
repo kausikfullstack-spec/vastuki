@@ -91,7 +91,7 @@ export default function CircularText({
     <motion.div
       role="img"
       aria-label={text.replace(/\s*·\s*$/, "")}
-      className={`circular-text relative w-full h-full rounded-full text-cream font-body font-medium text-center origin-center [&>span]:absolute [&>span]:top-0 [&>span]:right-0 [&>span]:bottom-0 [&>span]:left-0 [&>span]:block [&>span]:text-[12px] [&>span]:leading-[1] [&>span]:whitespace-pre [&>span]:origin-center max-md:[&>span]:text-[9px] ${className}`}
+      className={`circular-text relative w-full h-full rounded-full text-[#001f1a] font-body font-medium text-center origin-center [&>span]:absolute [&>span]:top-0 [&>span]:right-0 [&>span]:bottom-0 [&>span]:left-0 [&>span]:block [&>span]:text-[18px] [&>span]:leading-[1] [&>span]:whitespace-pre [&>span]:origin-center max-md:[&>span]:text-[9px] ${className}`}
       style={{ rotate: rotation }}
       initial={{ rotate: 0 }}
       animate={controls}

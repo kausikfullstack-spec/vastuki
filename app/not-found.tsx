@@ -1,3 +1,4 @@
+import { ButtonIcon } from "@/components/ui/button-icon";
 import FadeSection from "@/components/ui/fade-section";
 import { sectionSpacing, eyebrowStyles, buttonStyles } from "@/lib/styles";
 import Link from "next/link";
@@ -19,9 +20,9 @@ export default function NotFound() {
       </p>
       <Link
         href="/"
-        className={`${buttonStyles} button-green bg-green text-cream mt-8`}
+        className={`${buttonStyles} button-green mt-8`}
       >
-        Back to home
+        <ButtonIcon /> Back to home
       </Link>
     </FadeSection>
   );

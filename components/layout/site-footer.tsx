@@ -1,3 +1,4 @@
+import { ButtonIcon } from "@/components/ui/button-icon";
 import Link from "next/link";
 export function SiteFooter() {
   return (
@@ -21,11 +22,11 @@ export function SiteFooter() {
           <Link href="/contact">Let’s connect</Link>
         </nav>
         <Link
-          className="back-top w-[45px] h-[45px] [border:1px_solid_#ffecba60] rounded-full grid place-items-center"
+          className="button button-cream back-top w-[49px] h-[49px] p-0"
           href="#top"
           aria-label="Back to top"
         >
-          ↑
+          <ButtonIcon direction="up" />
         </Link>
       </div>
       <div className="footer-bottom [border-top:1px_solid_#ffecba25] pt-[25px] flex justify-between gap-[15px] text-[12px] text-[#ffecba80] max-md:flex-col max-md:text-[11px]">

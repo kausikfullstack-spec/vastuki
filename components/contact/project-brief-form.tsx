@@ -1,8 +1,9 @@
 "use client";
+import { ButtonIcon } from "@/components/ui/button-icon";
+
 import { eyebrowStyles, buttonStyles } from "@/lib/styles";
 
 import { useState } from "react";
-import { Arrow } from "@/components/ui/arrow";
 const fieldStyles =
   "w-full rounded-none border border-[#001e1935] bg-transparent p-3 text-base";
 
@@ -77,9 +78,9 @@ export function ProjectBriefForm() {
         </label>
         <button
           type="submit"
-          className={`${buttonStyles} button-green bg-green text-cream`}
+          className={`${buttonStyles} button-green`}
         >
-          Download project brief <Arrow diagonal />
+          <ButtonIcon /> Download project brief
         </button>
         {downloaded && (
           <p

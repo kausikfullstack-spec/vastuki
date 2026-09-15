@@ -1,7 +1,7 @@
+import { ButtonIcon } from "@/components/ui/button-icon";
 import FadeSection from "@/components/ui/fade-section";
 import { sectionSpacing, eyebrowStyles, buttonStyles } from "@/lib/styles";
 import Link from "next/link";
-import { Arrow } from "@/components/ui/arrow";
 
 export function ContactCta() {
   return (
@@ -23,10 +23,10 @@ export function ContactCta() {
         Every beautiful transformation begins with an idea.
       </p>
       <Link
-        className={`${buttonStyles} button-green bg-green text-cream`}
+        className={`${buttonStyles} button-green`}
         href="/contact"
       >
-        Start your project <Arrow diagonal />
+        <ButtonIcon /> Start your project
       </Link>
     </FadeSection>
   );

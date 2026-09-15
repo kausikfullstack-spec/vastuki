@@ -5,6 +5,7 @@
   --green: #001e19;
   --background: #fff9eb;
   --foreground: #001e19;
+  --site-texture-opacity: 0.08;
 }
 
 @theme inline {
@@ -75,6 +76,100 @@
   }
 }
 
+/* Shared texture sits behind content; opacity only affects the image. */
+@layer components {
+  :where(.site-header, main > section, .footer, dialog) {
+    position: relative;
+    isolation: isolate;
+  }
+
+  :where(.site-header, main > section, .footer, dialog)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background-image: url("/image/bg-image.jpg");
+    background-repeat: repeat;
+    background-size: 640px auto;
+    opacity: var(--site-texture-opacity);
+    pointer-events: none;
+  }
+}
+
+/* Pill buttons adapted from Uiverse.io by Creatlydev. */
+@layer components {
+  .button {
+    --button-bg: var(--green);
+    --button-fg: var(--cream);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 100%;
+    min-height: 49px;
+    padding: 0.75rem 1.5rem 0.75rem 1.25rem;
+    border: 0;
+    border-radius: 10rem;
+    background-color: var(--button-bg);
+    color: var(--button-fg);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .button-cream {
+    --button-bg: var(--cream);
+    --button-fg: var(--green);
+  }
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+    color: var(--button-bg);
+    background: var(--button-fg);
+    transition: color 0.3s, background-color 0.3s;
+  }
+  .button__icon-wrapper--left { rotate: -135deg; }
+  .button__icon-wrapper--right { rotate: 45deg; }
+  .button__icon-wrapper--up { rotate: -45deg; }
+  .button__icon-svg {
+    transition: transform 0.3s ease-in-out;
+  }
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  .button:is(:hover, :focus-visible) {
+    background-color: #000;
+    color: #fff;
+  }
+  .button:is(:hover, :focus-visible) .button__icon-wrapper {
+    color: #000;
+    background-color: #fff;
+  }
+  .button:is(:hover, :focus-visible) .button__icon-svg:first-child {
+    transform: translate(150%, -150%);
+  }
+  .button:is(:hover, :focus-visible) .button__icon-svg--copy {
+    transform: translate(0);
+    transition-delay: 0.1s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .button:is(:hover, :focus-visible) .button__icon-svg:first-child {
+      transform: none;
+    }
+    .button .button__icon-svg--copy { display: none; }
+  }
+}
+
 @keyframes text-cursor-blink {
   0%,
   49% {
@@ -83,5 +178,14 @@
   50%,
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes values-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }

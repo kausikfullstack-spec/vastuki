@@ -24,9 +24,9 @@ export function BeforeAfter() {
       </div>
       <div className="comparison-layout grid grid-cols-[1fr_4fr_1fr] gap-[34px] items-center mt-14.5 max-[1101px]:grid-cols-[1fr_3fr_1fr] max-[1101px]:gap-[20px] max-md:grid-cols-2 max-md:gap-y-[28px] max-md:gap-x-[22px] max-md:mt-[35px] max-md:[&>div:nth-child(2)]:col-[1_/_-1] max-md:[&>div:nth-child(2)]:row-[1]">
         <div className="comparison-copy [&_h3]:text-[28px] [&_h3]:font-medium [&_h3]:leading-[1.3] [&_h3]:tracking-[-0.015em] [&_h3]:my-4.5 [&_h3]:mx-0 [&_p]:text-[16px] [&_p]:leading-[1.8] [&_p]:opacity-65 max-[1101px]:[&_h3]:text-[28px] max-[1101px]:[&_h3]:font-medium max-[1101px]:[&_h3]:leading-[1.3] max-[1101px]:[&_h3]:tracking-[-0.015em] max-[1101px]:[&_p]:text-[16px] max-[1101px]:[&_p]:leading-[1.8] max-md:[&_h3]:text-[24px] max-md:[&_h3]:font-medium max-md:[&_h3]:leading-[1.3] max-md:[&_h3]:tracking-[-0.015em] max-md:[&_p]:text-[15px] max-md:[&_p]:leading-[1.8]">
-          <span className="small-index text-[7px] tracking-[0.1em] opacity-60">
+          {/* <span className="small-index text-[7px] tracking-[0.1em] opacity-60">
             01 — THE BEGINNING
-          </span>
+          </span> */}
           <h3>
             A vision worth
             <br />
@@ -83,14 +83,14 @@ export function BeforeAfter() {
               className="comparison-range absolute top-0 right-0 bottom-0 left-0 w-full h-full opacity-0 cursor-ew-resize m-0"
             />
           </div>
-          <p className="comparison-hint text-center text-[7px] tracking-[0.15em] mt-4.5 opacity-60 max-md:text-[6px]">
+          {/* <p className="comparison-hint text-center text-[7px] tracking-[0.15em] mt-4.5 opacity-60 max-md:text-[6px]">
             ← &nbsp; DRAG TO REVEAL THE TRANSFORMATION &nbsp; →
-          </p>
+          </p> */}
         </div>
         <div className="comparison-copy [&_h3]:text-[28px] [&_h3]:font-medium [&_h3]:leading-[1.3] [&_h3]:tracking-[-0.015em] [&_h3]:my-4.5 [&_h3]:mx-0 [&_p]:text-[16px] [&_p]:leading-[1.8] [&_p]:opacity-65 max-[1101px]:[&_h3]:text-[28px] max-[1101px]:[&_h3]:font-medium max-[1101px]:[&_h3]:leading-[1.3] max-[1101px]:[&_h3]:tracking-[-0.015em] max-[1101px]:[&_p]:text-[16px] max-[1101px]:[&_p]:leading-[1.8] max-md:[&_h3]:text-[24px] max-md:[&_h3]:font-medium max-md:[&_h3]:leading-[1.3] max-md:[&_h3]:tracking-[-0.015em] max-md:[&_p]:text-[15px] max-md:[&_p]:leading-[1.8] comparison-copy-right text-right max-md:text-left">
-          <span className="small-index text-[7px] tracking-[0.1em] opacity-60">
+          {/* <span className="small-index text-[7px] tracking-[0.1em] opacity-60">
             02 — THE NEW CHAPTER
-          </span>
+          </span> */}
           <h3>
             Designed for
             <br />

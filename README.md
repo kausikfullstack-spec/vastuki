@@ -20,7 +20,24 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Project 360° tours
+
+Every project detail page includes a tour section. To activate a project's viewer,
+place its full equirectangular panorama (360° × 180°, usually a 2:1 JPEG) in
+`public/panoramas/`, then set that project's `panorama` in `lib/content.ts` to
+`"/panoramas/your-project.jpg"`. Keep it `null` until a real panorama is available;
+the page then offers four clearly labelled sample rooms: living room, drawing
+room, bedroom, and bathroom. Demo images and source links are configured in
+`lib/demo-panoramas.ts` and stored locally in `public/panoramas/demo/`.
+Ordinary project photographs cannot provide a full 360° view.
+
+The viewer opens automatically with the project's panorama or the first demo room
+(living room). The room buttons switch panoramas. Moving the mouse
+across the image pans the camera; “Mouse look” switches this off for drag-only
+navigation. It also supports touch panning, keyboard controls, zoom, and fullscreen via
+[Pannellum](https://pannellum.org/documentation/overview/).
+
+## Next.js resources
 
 To learn more about Next.js, take a look at the following resources:
 

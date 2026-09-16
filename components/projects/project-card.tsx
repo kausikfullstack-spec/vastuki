@@ -22,7 +22,7 @@ export function ProjectCard({
           alt={project.title}
           fill
           sizes="(max-width: 768px) 100vw, 45vw"
-          className="object-cover"
+          className="object-cover rounded-2xl"
         />
         <span className="project-open absolute right-4.5 bottom-4.5 rounded-full w-11 h-11 grid place-items-center bg-cream">
           <Arrow diagonal />
@@ -33,7 +33,7 @@ export function ProjectCard({
           <span className={`${eyebrowStyles}`}>{project.type}</span>
           <h3>{project.title}</h3>
         </div>
-        <span className="project-number font-heading text-[20px] opacity-35">
+        <span className="project-number font-heading text-[40px] opacity-35">
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>

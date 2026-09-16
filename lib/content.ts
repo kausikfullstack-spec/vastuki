@@ -1,6 +1,18 @@
-export const projects = [
+export type Project = {
+  slug: string;
+  title: string;
+  type: string;
+  image: string;
+  detail: string;
+  images: string[];
+  /** Full 360° equirectangular image, ideally 2:1. Null until available. */
+  panorama: string | null;
+};
+
+export const projects: Project[] = [
   {
     slug: "everyday-living",
+    panorama: null,
     title: "The art of everyday living",
     type: "Living spaces",
     image: "/image/RBM03176.JPG",
@@ -10,6 +22,7 @@ export const projects = [
   },
   {
     slug: "softer-sanctuary",
+    panorama: null,
     title: "A softer kind of sanctuary",
     type: "Private retreats",
     image: "/image/_DSC9756-Edit.jpg",
@@ -19,6 +32,7 @@ export const projects = [
   },
   {
     slug: "considered-details",
+    panorama: null,
     title: "Considered in every detail",
     type: "Contemporary homes",
     image: "/image/_DSC9698-Edit.jpg",
@@ -53,5 +67,3 @@ export const services = [
     "Design, material selection, site coordination and finishing are brought together in one carefully managed process.",
   ],
 ];
-
-export type Project = (typeof projects)[number];

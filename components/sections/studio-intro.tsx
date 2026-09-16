@@ -16,13 +16,14 @@ export function StudioIntro() {
           alt="Calm green bedroom with bespoke timber detailing"
           fill
           sizes="(max-width: 768px) 100vw, 43vw"
-          className="object-cover"
+          className="object-cover rounded-2xl"
         />
-        <span className="image-note absolute bottom-[21px] left-6 text-white tracking-[0.14em] text-[8px] [text-shadow:0_1px_8px_#000]">
+        {/* <span className="image-note absolute bottom-[21px] left-6 text-white tracking-[0.14em] text-[8px] [text-shadow:0_1px_8px_#000]">
           A LITTLE OF YOU. IN EVERY DETAIL.
-        </span>
+        </span> */}
         <div className="about-seal w-29.5 h-29.5 absolute right-[-52px] bottom-12.5 bg-green text-cream rounded-full [border:6px_solid_var(--background)] flex flex-col items-center justify-center font-heading text-[49px] [&_span]:uppercase [&_span]:tracking-[0.12em] [&_span]:mt-[3px] [&_span]:font-body [&_span]:text-[8px] [&_span]:leading-[1.5] max-md:right-[-25px] max-md:w-25 max-md:h-25">
-          V<span>Spaces with soul</span>
+          V
+          {/* <span>Spaces with soul</span> */}
         </div>
       </div>
       <div className="about-copy [&_h2]:my-[25px] [&_h2]:mx-0 [&_p]:text-[16px] [&_p]:leading-[1.8] [&_p]:my-[15px] [&_p]:mx-0 [&_p]:opacity-65 [&_p]:max-w-[430px] max-md:[&_p]:max-w-[none] max-md:[&_p]:text-[15px] max-md:[&_p]:leading-[1.8]">

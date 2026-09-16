@@ -6,6 +6,8 @@ import { projects } from "@/lib/content";
 import { PageIntro } from "@/components/ui/page-intro";
 import { ProjectGallery } from "@/components/projects/project-gallery";
 import { ContactCta } from "@/components/sections/contact-cta";
+import { BeforeAfter } from "@/components/sections/before-after";
+import { ProjectTour } from "@/components/projects/project-tour";
 
 export function generateStaticParams() {
   return projects.map(({ slug }) => ({ slug }));
@@ -34,6 +36,8 @@ export default async function ProjectPage({ params }: Props) {
         </Link>
         <ProjectGallery images={project.images} title={project.title} />
       </div>
+      <ProjectTour key={project.slug} title={project.title} panorama={project.panorama} />
+      <BeforeAfter />
       <ContactCta />
     </>
   );
